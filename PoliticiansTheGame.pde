@@ -36,3 +36,36 @@
          -Play Again
          -Main Screen
 */
+//-------------------------------------------------------------------------------
+
+int screen = 1; // set screen to main menu
+PFont font;
+
+void setup()
+{
+  size (700, 700);
+  font = loadFont("Monospaced.bold-48.vlw");
+}
+
+
+void draw()
+{
+  background(0);
+  textFont(font, 40);
+  fill(255);
+  
+  
+  
+  //Main Menu
+  if (screen == 1)
+  {
+    textAlign(CENTER);
+    fill(120,230,80);
+    textFont(font, 60);
+    text("*** Politicians ***", 350, 150);
+    textFont(font, 30);
+    text("The Game!", 350, 200);
+    
+  }
+  
+}
