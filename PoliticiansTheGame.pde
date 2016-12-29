@@ -30,6 +30,8 @@
          -no grid
          -pvector movement, not just 90 de gree turns
          -no edge screen obstacle - wrap around screen?
+         
+   [ ]  Multiplayer?
         
    [ ]  END Screen
          -Show Score
@@ -45,16 +47,18 @@ void setup()
 {
   size (700, 700);
   font = loadFont("Monospaced.bold-48.vlw");
+  
+  playButton = new Button(); //initialising
 }
 
-
+  Button playButton; //declaring
+  
+  
 void draw()
 {
   background(0);
   textFont(font, 40);
   fill(255);
-  
-  
   
   //Main Menu
   if (screen == 1)
@@ -65,6 +69,9 @@ void draw()
     text("*** Politicians ***", 350, 150);
     textFont(font, 30);
     text("The Game!", 350, 200);
+    
+    playButton.render();
+    
     
   }
   
