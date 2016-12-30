@@ -48,10 +48,16 @@ void setup()
   size (700, 700);
   font = loadFont("Monospaced.bold-48.vlw");
   
-  //initialising
+  //initialising buttons
   playButton = new Button(100, 300, "Play"); 
   aboutButton = new Button(400, 300, "About");
   scoreButton = new Button (250, 450, "Scores");
+  
+  classicPlayButton = new Button (250, 150, "Classic");
+  freePlayButton = new Button ( 250, 300, "Freestyle");
+  surprisePlayButton = new Button (250, 450, "Surprise");
+  
+  
 }
 
   //declaring
@@ -59,11 +65,16 @@ void setup()
   Button aboutButton;
   Button scoreButton;
   
+  Button classicPlayButton;
+  Button freePlayButton;
+  Button surprisePlayButton;
+  
 void draw()
 {
   background(0);
   textFont(font, 40);
   fill(255);
+  
   
   //Main Menu
   if (screen == 1)
@@ -97,6 +108,22 @@ void draw()
       screen = 4; //change to score screen
     }
     
+  }
+  
+  
+  //Play Option Screen
+  if (screen == 2)
+  {
+    textAlign(CENTER);
+    fill(120,230,80);
+    textFont(font, 40);
+    text("*** Choose A Game Mode ***", 350, 88);
+    
+    textFont(font, 25);
+    classicPlayButton.render();
+    freePlayButton.render();
+    surprisePlayButton.render();
+      
   }
   
 }

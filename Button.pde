@@ -20,7 +20,7 @@ class Button
       rect( butX, butY, butSize, 100);
       fill(0);
       textAlign(LEFT);
-      text(buttonText, butX+55, butY+55);
+      text(buttonText, butX+45, butY+55);
   }
   
    //check for mouse over specific button
