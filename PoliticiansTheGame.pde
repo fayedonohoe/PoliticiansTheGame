@@ -48,11 +48,16 @@ void setup()
   size (700, 700);
   font = loadFont("Monospaced.bold-48.vlw");
   
-  playButton = new Button(); //initialising
+  //initialising
+  playButton = new Button(100, 300, "Play"); 
+  aboutButton = new Button(400, 300, "About");
+  scoreButton = new Button (250, 450, "Scores");
 }
 
-  Button playButton; //declaring
-  
+  //declaring
+  Button playButton; 
+  Button aboutButton;
+  Button scoreButton;
   
 void draw()
 {
@@ -71,7 +76,8 @@ void draw()
     text("The Game!", 350, 200);
     
     playButton.render();
-    
+    aboutButton.render();
+    scoreButton.render();
     
   }
   

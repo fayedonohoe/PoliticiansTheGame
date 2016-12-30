@@ -13,14 +13,13 @@ class Button
      this.buttonText = buttonText;
    }
   
-  
-  
-  
-/*  
    void render()
   {
       fill(colour);
       rect( butX, butY, butSize, 100);
-  } 
-  */
+      fill(0);
+      textAlign(LEFT);
+      text(buttonText, butX+55, butY+55);
+  }
+
 }
