@@ -79,6 +79,24 @@ void draw()
     aboutButton.render();
     scoreButton.render();
     
+    playButton.checkHover();
+    if (playButton.inside && mousePressed)
+    {
+      screen = 2; //change to play screen
+    }
+    
+    aboutButton.checkHover();
+    if (aboutButton.inside && mousePressed)
+    {
+      screen = 3; //change to about screen
+    }
+    
+    scoreButton.checkHover();
+    if (scoreButton.inside && mousePressed)
+    {
+      screen = 4; //change to score screen
+    }
+    
   }
   
 }
