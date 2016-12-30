@@ -3,7 +3,7 @@
   Politicians - The Game!
   ------------------------
   
- The popular game snake but with a few twists and turns (literally).
+ The popular game "Snake" but with a few twists and turns (literally).
  
  Date: 26-12-16
  Author: Faye Donohoe
@@ -90,27 +90,28 @@ void draw()
     aboutButton.render();
     scoreButton.render();
     
-    playButton.checkHover();
+    playButton.checkHover();  
+    aboutButton.checkHover();
+    scoreButton.checkHover();
+    
+    //Make Selection
     if (playButton.inside && mousePressed)
     {
       screen = 2; //change to play screen
     }
-    
-    aboutButton.checkHover();
-    if (aboutButton.inside && mousePressed)
+    else if (aboutButton.inside && mousePressed)
     {
       screen = 3; //change to about screen
     }
     
-    scoreButton.checkHover();
-    if (scoreButton.inside && mousePressed)
+    else if (scoreButton.inside && mousePressed)
     {
       screen = 4; //change to score screen
     }
     
   }
   
-  
+//================================================= Play Options and Game Modes ==================================================  
   //Play Option Screen
   if (screen == 2)
   {
@@ -123,6 +124,24 @@ void draw()
     classicPlayButton.render();
     freePlayButton.render();
     surprisePlayButton.render();
+    
+    classicPlayButton.checkHover();
+    freePlayButton.checkHover();
+    surprisePlayButton.checkHover();
+    
+    if (classicPlayButton.inside && mousePressed)
+    {
+      screen = 21; // OR call classicGameMode()
+    }
+    else if (freePlayButton.inside && mousePressed)
+    {
+      screen = 22; // OR call freeGameMode()
+    }
+    else if (surprisePlayButton.inside && mousePressed)
+    {
+      screen = 23; // OR call surpriseGameMode()
+    }
+   
       
   }
   
