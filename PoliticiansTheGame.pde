@@ -10,8 +10,11 @@
   
    Ideas:
    [ ]  Main Menu
+         - "starfield" of apples?
+         - snake going around in background?
         []  About the Game
         []  Play
+             - hover over = gamemode descriptions?
         []  High Scores?
         
    [ ]  Classic Game Mode
@@ -140,9 +143,20 @@ void draw()
     else if (surprisePlayButton.inside && mousePressed)
     {
       screen = 23; // OR call surpriseGameMode()
-    }
-   
-      
+    }      
+  }//End play options / screen 2
+  
+  if (screen == 21)
+  {
+    classicGameMode();
+  }
+  if (screen == 22)
+  {
+    freeGameMode();
+  }
+  if (screen == 23)
+  {
+    surpriseGameMode();
   }
   
-}
+}// End draw()
