@@ -1,6 +1,11 @@
 class GameMode
 {
+  int gm; //game mode 
   
+  GameMode(int gm)
+  {
+    this.gm = gm;
+  }
   
   void render()
   {

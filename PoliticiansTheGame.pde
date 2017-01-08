@@ -84,6 +84,7 @@ void draw()
   textFont(font, 40);
   fill(255);
   
+  int gm =0;
   
   //Main Menu
   if (screen == 1)
@@ -156,15 +157,18 @@ void draw()
   
   if (screen == 21)
   {
+    gm = 1;
     classicGameMode();
     //drawGrid();
   }
   if (screen == 22)
   {
+    gm = 2;
     freeGameMode();
   }
   if (screen == 23)
   {
+    gm = 3;
     surpriseGameMode();
   }
   
