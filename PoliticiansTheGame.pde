@@ -22,7 +22,7 @@
          -traditional grid - loops
          -start values - length of snake / colour / speed
          -score counter - top corner?
-         -apples? - coloured square
+         -apples/ oranges/ lemons/ limes/ blueberries? - coloured square
          -die when collide with sides of screen / self / obstacles?-not in classic... 
    
    [ ]  Surprise Game Mode
@@ -33,6 +33,8 @@
          -no grid
          -pvector movement, not just 90 de gree turns
          -no edge screen obstacle - wrap around screen?
+         
+   [ ]  Pause Screen
          
    [ ]  Multiplayer?
         
@@ -45,6 +47,7 @@
 
 int screen = 1; // set screen to main menu
 PFont font;
+int sqSize = 25; //declare a size for each square on grid/snake/fruit
 
 void setup()
 {
@@ -60,6 +63,7 @@ void setup()
   freePlayButton = new Button ( 250, 300, "Freestyle");
   surprisePlayButton = new Button (250, 450, "Surprise");
   
+  classicGameMode = new classicGameMode;
   
 }
 
@@ -71,6 +75,8 @@ void setup()
   Button classicPlayButton;
   Button freePlayButton;
   Button surprisePlayButton;
+  
+  
   
 void draw()
 {
@@ -96,6 +102,8 @@ void draw()
     playButton.checkHover();  
     aboutButton.checkHover();
     scoreButton.checkHover();
+    
+    
     
     //Make Selection
     if (playButton.inside && mousePressed)
@@ -149,6 +157,7 @@ void draw()
   if (screen == 21)
   {
     classicGameMode();
+    //drawGrid();
   }
   if (screen == 22)
   {
