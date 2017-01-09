@@ -2,6 +2,12 @@ class GameMode
 {
   int gm; //game mode 
   
+   GameMode()
+  {
+    
+  }
+  
+  
   GameMode(int gm)
   {
     this.gm = gm;
@@ -10,7 +16,7 @@ class GameMode
   void render()
   {
     drawGrid();
-    
+    //text("please work", width/3, height/2);
   }
   
 }
@@ -18,6 +24,8 @@ class GameMode
 void drawGrid()
 {
   fill(255);
+  do
+  {
     for (int i=0; i<height; i++)
     {
       line(0, i*sqSize, width, i*sqSize); 
@@ -26,4 +34,8 @@ void drawGrid()
     {
       line(i*sqSize, 0, i*sqSize, height);
     }
+    text("please work", width/3, height/2);
+  }
+  while( gameOver != 0);
+    //text("please work", width/3, height/2);
 }

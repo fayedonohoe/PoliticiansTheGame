@@ -8,6 +8,7 @@ class classicGameMode extends GameMode
   //call all other functions from here
   //while (screen == 21) 
 
+/*
   classicGameMode()
   {
   }
@@ -24,6 +25,6 @@ class classicGameMode extends GameMode
       line(i*sqSize, 0, i*sqSize, height);
     }
   }
-  
+  */
 }
   

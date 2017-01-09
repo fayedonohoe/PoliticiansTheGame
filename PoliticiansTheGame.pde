@@ -48,6 +48,7 @@
 int screen = 1; // set screen to main menu
 PFont font;
 int sqSize = 25; //declare a size for each square on grid/snake/fruit
+int gameOver = 0;
 
 void setup()
 {
@@ -63,7 +64,7 @@ void setup()
   freePlayButton = new Button ( 250, 300, "Freestyle");
   surprisePlayButton = new Button (250, 450, "Surprise");
   
-  classicGameMode = new classicGameMode;
+  classicGameMode = new GameMode(1);
   
 }
 
@@ -76,7 +77,7 @@ void setup()
   Button freePlayButton;
   Button surprisePlayButton;
   
-  
+  GameMode classicGameMode;
   
 void draw()
 {
@@ -84,7 +85,7 @@ void draw()
   textFont(font, 40);
   fill(255);
   
-  int gm =0;
+  int gm = 0;
   
   //Main Menu
   if (screen == 1)
@@ -103,8 +104,7 @@ void draw()
     playButton.checkHover();  
     aboutButton.checkHover();
     scoreButton.checkHover();
-    
-    
+        
     
     //Make Selection
     if (playButton.inside && mousePressed)
@@ -122,7 +122,6 @@ void draw()
     }
     
   }
-  
 //================================================= Play Options and Game Modes ==================================================  
   //Play Option Screen
   if (screen == 2)
@@ -158,7 +157,7 @@ void draw()
   if (screen == 21)
   {
     gm = 1;
-    classicGameMode();
+    classicGameMode.render();
     //drawGrid();
   }
   if (screen == 22)
