@@ -86,89 +86,96 @@ void draw()
   fill(255);
   
   int gm = 0;
-  
-  //Main Menu
-  if (screen == 1)
+    
+  switch(screen) 
   {
-    textAlign(CENTER);
-    fill(120,230,80);
-    textFont(font, 60);
-    text("*** Politicians ***", 350, 150);
-    textFont(font, 30);
-    text("The Game!", 350, 200);
+    case 1:
+    //Main Menu
+    ///if (screen == 1)
+    ///{
+      textAlign(CENTER);
+      fill(120,230,80);
+      textFont(font, 60);
+      text("*** Politicians ***", 350, 150);
+      textFont(font, 30);
+      text("The Game!", 350, 200);
+      
+      playButton.render();
+      aboutButton.render();
+      scoreButton.render();
+      
+      playButton.checkHover();  
+      aboutButton.checkHover();
+      scoreButton.checkHover();
+          
+      
+      //Make Selection
+      if (playButton.inside && mousePressed)
+      {
+        screen = 2; //change to play screen
+      }
+      else if (aboutButton.inside && mousePressed)
+      {
+        screen = 3; //change to about screen
+      }
+      
+      else if (scoreButton.inside && mousePressed)
+      {
+        screen = 4; //change to score screen
+      }
+      ///break;
+      
+    ///}
+  //================================================= Play Options and Game Modes ==================================================  
+    //Play Option Screen
+    //if (screen == 2)
+    ///{
+      case 2:
+      textAlign(CENTER);
+      fill(120,230,80);
+      textFont(font, 40);
+      text("*** Choose A Game Mode ***", 350, 88);
+      
+      textFont(font, 25);
+      classicPlayButton.render();
+      freePlayButton.render();
+      surprisePlayButton.render();
+      
+      classicPlayButton.checkHover();
+      freePlayButton.checkHover();
+      surprisePlayButton.checkHover();
+      
+      if (classicPlayButton.inside && mousePressed)
+      {
+        screen = 21; // OR call classicGameMode()
+      }
+      else if (freePlayButton.inside && mousePressed)
+      {
+        screen = 22; // OR call freeGameMode()
+      }
+      else if (surprisePlayButton.inside && mousePressed)
+      {
+        screen = 23; // OR call surpriseGameMode()
+      }      
+    }//End play options / screen 2
     
-    playButton.render();
-    aboutButton.render();
-    scoreButton.render();
-    
-    playButton.checkHover();  
-    aboutButton.checkHover();
-    scoreButton.checkHover();
-        
-    
-    //Make Selection
-    if (playButton.inside && mousePressed)
+    if (screen == 21)
     {
-      screen = 2; //change to play screen
+      gm = 1;
+      classicGameMode.render();
+      //drawGrid();
     }
-    else if (aboutButton.inside && mousePressed)
+    else if (screen == 22)
     {
-      screen = 3; //change to about screen
+      gm = 2;
+      freeGameMode();
     }
-    
-    else if (scoreButton.inside && mousePressed)
+    else if (screen == 23)
     {
-      screen = 4; //change to score screen
+      gm = 3;
+      surpriseGameMode();
     }
+    ///break;
     
-  }
-//================================================= Play Options and Game Modes ==================================================  
-  //Play Option Screen
-  if (screen == 2)
-  {
-    textAlign(CENTER);
-    fill(120,230,80);
-    textFont(font, 40);
-    text("*** Choose A Game Mode ***", 350, 88);
-    
-    textFont(font, 25);
-    classicPlayButton.render();
-    freePlayButton.render();
-    surprisePlayButton.render();
-    
-    classicPlayButton.checkHover();
-    freePlayButton.checkHover();
-    surprisePlayButton.checkHover();
-    
-    if (classicPlayButton.inside && mousePressed)
-    {
-      screen = 21; // OR call classicGameMode()
-    }
-    else if (freePlayButton.inside && mousePressed)
-    {
-      screen = 22; // OR call freeGameMode()
-    }
-    else if (surprisePlayButton.inside && mousePressed)
-    {
-      screen = 23; // OR call surpriseGameMode()
-    }      
-  }//End play options / screen 2
-  
-  if (screen == 21)
-  {
-    gm = 1;
-    classicGameMode.render();
-    //drawGrid();
-  }
-  if (screen == 22)
-  {
-    gm = 2;
-    freeGameMode();
-  }
-  if (screen == 23)
-  {
-    gm = 3;
-    surpriseGameMode();
-  }
-  
+  }//end switch  
 }// End draw()

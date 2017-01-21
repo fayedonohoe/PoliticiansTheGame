@@ -19,13 +19,13 @@ class GameMode
     //text("please work", width/3, height/2);
   }
   
-}
+///}
 
 void drawGrid()
 {
-  fill(255);
   do
   {
+    fill(255);
     for (int i=0; i<height; i++)
     {
       line(0, i*sqSize, width, i*sqSize); 
@@ -38,4 +38,6 @@ void drawGrid()
   }
   while( gameOver != 0);
     //text("please work", width/3, height/2);
+}
+
 }
