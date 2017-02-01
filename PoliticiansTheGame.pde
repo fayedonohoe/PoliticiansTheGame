@@ -85,7 +85,7 @@ void draw()
   textFont(font, 40);
   fill(255);
   
-  int gm = 0;
+  //int gm = 0;
     
   switch(screen) 
   {
@@ -123,13 +123,11 @@ void draw()
       {
         screen = 4; //change to score screen
       }
-      ///break;
+      break;
       
     ///}
   //================================================= Play Options and Game Modes ==================================================  
     //Play Option Screen
-    //if (screen == 2)
-    ///{
       case 2:
       textAlign(CENTER);
       fill(120,230,80);
@@ -156,26 +154,23 @@ void draw()
       else if (surprisePlayButton.inside && mousePressed)
       {
         screen = 23; // OR call surpriseGameMode()
-      }      
-    }//End play options / screen 2
+      }     
+       break; //End play options / screen 2
     
-    if (screen == 21)
-    {
-      gm = 1;
+
+     case 21:
       classicGameMode.render();
       //drawGrid();
-    }
-    else if (screen == 22)
-    {
-      gm = 2;
-      freeGameMode();
-    }
-    else if (screen == 23)
-    {
-      gm = 3;
-      surpriseGameMode();
-    }
-    ///break;
+      break;
     
-  }//end switch  
-}// End draw()
+      case 22:
+      freeGameMode();
+      break;
+    
+      case 23:
+      surpriseGameMode();
+      break;
+ 
+    }// end switch
+    
+  }//end draw
