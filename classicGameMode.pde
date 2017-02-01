@@ -1,23 +1,31 @@
 //variables here
 
-class classicGameMode extends GameMode
-{
+///class classicGameMode
+///{
   //fill(120,230,80);
   //text("Coming Soon!", width/3, height/2);
   
   //call all other functions from here
   //while (screen == 21) 
 
-/*
-  classicGameMode()
+
+  void classicGameMode()
   {
-  }
+    text("PLEASE WORK", 50, 50);
+    
+    drawGrid();
+    
+  
+
+
+}
    
     void drawGrid()
   {
-    fill(255);
+    stroke(255);
     for (int i=0; i<height; i++)
     {
+      
       line(0, i*sqSize, width, i*sqSize); 
     }
     for (int i=0; i<width; i++)
@@ -25,6 +33,6 @@ class classicGameMode extends GameMode
       line(i*sqSize, 0, i*sqSize, height);
     }
   }
-  */
-}
+ 
+///}
   

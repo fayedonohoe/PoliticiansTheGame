@@ -64,7 +64,7 @@ void setup()
   freePlayButton = new Button ( 250, 300, "Freestyle");
   surprisePlayButton = new Button (250, 450, "Surprise");
   
-  classicGameMode = new GameMode(1);
+
   
 }
 
@@ -77,7 +77,6 @@ void setup()
   Button freePlayButton;
   Button surprisePlayButton;
   
-  GameMode classicGameMode;
   
 void draw()
 {
@@ -91,8 +90,6 @@ void draw()
   {
     case 1:
     //Main Menu
-    ///if (screen == 1)
-    ///{
       textAlign(CENTER);
       fill(120,230,80);
       textFont(font, 60);
@@ -159,8 +156,7 @@ void draw()
     
 
      case 21:
-      classicGameMode.render();
-      //drawGrid();
+      classicGameMode();
       break;
     
       case 22:
