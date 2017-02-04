@@ -49,6 +49,7 @@ int screen = 1; // set screen to main menu
 PFont font;
 int sqSize = 25; //declare a size for each square on grid/snake/fruit
 int gameOver = 0;
+color green = color(120,230,80);
 
 void setup()
 {
@@ -67,6 +68,8 @@ void setup()
  /// int levelID = 0;
   game = new GameMode();
   
+  player = new Politician();
+  
 
   
 }
@@ -82,6 +85,7 @@ void setup()
   
   GameMode game;
   
+  Politician player;
   
 void draw()
 {
@@ -96,7 +100,7 @@ void draw()
     case 1:
     //Main Menu
       textAlign(CENTER);
-      fill(120,230,80);
+      fill(green);
       textFont(font, 60);
       text("*** Politicians ***", 350, 150);
       textFont(font, 30);
@@ -132,7 +136,7 @@ void draw()
     //Play Option Screen
       case 2:
       textAlign(CENTER);
-      fill(120,230,80);
+      fill(green);
       textFont(font, 40);
       text("*** Choose A Game Mode ***", 350, 88);
       

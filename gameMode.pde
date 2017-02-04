@@ -13,6 +13,7 @@ class GameMode
     if (level == 1)
     {
       drawGrid();
+      player.render();
     }
   }
     
@@ -22,7 +23,6 @@ class GameMode
     stroke(75);
     for (int i=0; i<height; i++)
     {
-      
       line(0, i*sqSize, width, i*sqSize); 
     }
     for (int i=0; i<width; i++)
