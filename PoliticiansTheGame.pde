@@ -64,6 +64,9 @@ void setup()
   freePlayButton = new Button ( 250, 300, "Freestyle");
   surprisePlayButton = new Button (250, 450, "Surprise");
   
+ /// int levelID = 0;
+  game = new GameMode();
+  
 
   
 }
@@ -76,6 +79,8 @@ void setup()
   Button classicPlayButton;
   Button freePlayButton;
   Button surprisePlayButton;
+  
+  GameMode game;
   
   
 void draw()
@@ -156,15 +161,15 @@ void draw()
     
 
      case 21:
-      classicGameMode();
+      game.play(1);
       break;
     
       case 22:
-      freeGameMode();
+      game.play(2);
       break;
     
       case 23:
-      surpriseGameMode();
+      game.play(3);
       break;
  
     }// end switch
