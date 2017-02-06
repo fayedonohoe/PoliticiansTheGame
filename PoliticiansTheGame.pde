@@ -70,6 +70,7 @@ void setup()
   
   player = new Politician();
   
+  
 
   
 }
