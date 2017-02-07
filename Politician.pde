@@ -39,8 +39,6 @@ class Politician
    
   void update()
   {  
-     
-     
      if (keyPressed)
      {         
          if ( keyCode == UP )
@@ -64,10 +62,38 @@ class Politician
          {
            dir = changeDir;
          }
-         
+       }//end key pressed if
+    }//end update()
+    
+  /* CODE TO WRAP AROUND SCREEN - 
+     Runs but doesnt work as should
+  
+  void wrap()
+  {
+    
+     if (bodX.get(0) > width)
+     {
+       bodX.add(0, 0);
+       
+       for (int i = 1; i < bodX.size(); i++)
+       {
+         bodX.add( i, (bodX.get(i-1)) );
+       }
+ 
+     if (bodX.get(0) < width)
+     {
+       bodX.add(0, width);
+       
+       for (int i = 1; i < bodX.size(); i++)
+       {
+         bodX.add( i, (bodX.get(i-1)) );
        }
      }
-  }
+    }   
+  }//end wrap()
+ */
+  
+  }// end class politician
     
      
   
