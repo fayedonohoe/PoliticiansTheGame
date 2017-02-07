@@ -65,6 +65,11 @@ class Politician
        }//end key pressed if
     }//end update()
     
+      
+}// end class politician
+    
+    
+    
   /* CODE TO WRAP AROUND SCREEN - 
      Runs but doesnt work as should
   
@@ -92,8 +97,7 @@ class Politician
     }   
   }//end wrap()
  */
-  
-  }// end class politician
+
     
      
   
