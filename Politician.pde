@@ -42,11 +42,7 @@ class Politician
      
      
      if (keyPressed)
-     {
-              
-       //if (keyCode == CODED)
-       //{
-         
+     {         
          if ( keyCode == UP )
          {
            changeDir = 0;
@@ -68,7 +64,6 @@ class Politician
          {
            dir = changeDir;
          }
-       //}
          
        }
      }
