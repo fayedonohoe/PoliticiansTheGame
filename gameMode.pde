@@ -14,7 +14,7 @@ class GameMode
     {
       drawGrid();
       player.render();
-      //player.update();
+      player.update();
     }
   }
     

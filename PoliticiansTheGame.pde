@@ -70,9 +70,14 @@ void setup()
   
   player = new Politician();
   
-  
-
-  
+  //set up the start of the snake
+  bodX.add(10);
+  bodX.add(10);
+  bodX.add(10);
+  bodY.add(10);
+  bodY.add(9);
+  bodY.add(8);
+ 
 }
 
   //declaring
@@ -87,6 +92,7 @@ void setup()
   GameMode game;
   
   Politician player;
+  
   
 void draw()
 {
