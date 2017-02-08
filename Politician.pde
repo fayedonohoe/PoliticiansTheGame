@@ -1,7 +1,7 @@
 ArrayList<Integer> bodX = new ArrayList<Integer>();
 ArrayList<Integer> bodY = new ArrayList<Integer>();
 
-class Politician
+class Politician extends GameObject
 {
   int dir = 1;
   int changeDir ;
@@ -29,6 +29,8 @@ class Politician
     
     if( frameCount % 6 == 0)
     {
+      //constrain(bodX.get(0), 0, width-125);
+      //constrain(bodY.get(0), 0, height-125);
       bodX.add(0, bodX.get(0) + x[dir] );
       bodY.add(0, bodY.get(0) + y[dir] );
       bodX.remove( bodX.size() -1 );
@@ -63,13 +65,24 @@ class Politician
            dir = changeDir;
          }
        }//end key pressed if
+       
+       
+       
     }//end update()
     
+   /* void gameOver()
+  {
+    background(0);
+    fill(green);
+    text("You Lost The Election!", width/3, height/2);
+  }
+  */  
       
 }// end class politician
     
     
     
+///////////////////////////////////////////////////////    
   /* CODE TO WRAP AROUND SCREEN - 
      Runs but doesnt work as should
   

@@ -45,11 +45,15 @@
 */
 //-------------------------------------------------------------------------------
 
+
+
+
 int screen = 1; // set screen to main menu
 PFont font;
 int sqSize = 25; //declare a size for each square on grid/snake/fruit
 int gameOver = 0;
 color green = color(120,230,80);
+int score = 0;
 
 void setup()
 {
@@ -65,7 +69,7 @@ void setup()
   freePlayButton = new Button ( 250, 300, "Freestyle");
   surprisePlayButton = new Button (250, 450, "Surprise");
   
- /// int levelID = 0;
+  int lev;
   game = new GameMode();
   
   player = new Politician();
@@ -99,9 +103,7 @@ void draw()
   background(0);
   textFont(font, 40);
   fill(255);
-  
-  //int gm = 0;
-    
+     
   switch(screen) 
   {
     case 1:
