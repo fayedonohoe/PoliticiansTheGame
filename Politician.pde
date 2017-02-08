@@ -39,11 +39,19 @@ class Politician extends GameObject
       {
         coin.render( color(255, 255, 51) );
         eating = coin.eat();
+        if (eating == 1)
+        {
+          score = score + 25;
+        }
       }
       else
       {
         apple.render( color(255, 0, 0) );
         eating = apple.eat();
+        if (eating == 1)
+        {
+          score = score + 10;
+        }
       }
       
       if (eating == 1)
@@ -86,17 +94,20 @@ class Politician extends GameObject
          }
        }//end key pressed if
        
-       
+       if (bodX.get(0) > (width-150))
+       {
+         gameOver();
+       }
        
     }//end update()
     
-   /* void gameOver()
+    void gameOver()
   {
     background(0);
     fill(green);
     text("You Lost The Election!", width/3, height/2);
   }
-  */  
+    
       
 }// end class politician
     

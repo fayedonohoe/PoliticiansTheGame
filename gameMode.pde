@@ -62,7 +62,9 @@ class GameMode
     }
     
     fill(green);
-    text("Score:", score, width-100, height);
+    text("Score:", 50, height-75);
+    text( score, 95, height-40 );
+    
   }
   
    
