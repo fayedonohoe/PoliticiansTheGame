@@ -21,7 +21,7 @@ class GameMode
       drawGrid();
       player.render();
       
-      if (foodCount % 5 == 0)
+      if (foodCount % 5 == 0 && foodCount != 0)
       {
         coin.render( color(255, 255, 51) );
       }

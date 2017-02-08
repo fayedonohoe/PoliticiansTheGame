@@ -1,7 +1,7 @@
 class GameObject
 {
-  int goX = (int)random(0, width-150);
-  int goY = (int)random(0, height-150);
+  int goX = (int)random(0, 22); //22 blocks
+  int goY = (int)random(0, 22);
   color col;
   
   GameObject()
@@ -19,7 +19,7 @@ class GameObject
   void render(color col)
   {
     fill(col);
-    rect(goX, goY, sqSize, sqSize); 
+    rect(goX*sqSize, goY*sqSize, sqSize, sqSize);  
   }
   
 }
