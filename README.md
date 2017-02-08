@@ -9,10 +9,10 @@ Click your way through the menu until you choose a game mode. Then use the arrow
 Every apple is worth 10 points and every coin is worth 25.
 
 Points of Interest:
-Use of classes and inheritence
-Use of array lists (for the politician)
-Polymorphism (GameObject Class is extended by both Politician and Food)
-Humour
+Use of classes and inheritence, 
+Use of array lists (for the politician), 
+Polymorphism (GameObject Class is extended by both Politician and Food), 
+Humour, 
 Room for expansion to continue on as a personal project - loads more ideas to impliment!
 
 
