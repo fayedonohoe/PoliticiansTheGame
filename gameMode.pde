@@ -16,24 +16,16 @@ class GameMode
     if (level == 1)
     {
       drawGrid();
-      /*
-      if (foodCount % 5 == 0 && foodCount != 0)
-      {
-        coin.render( color(255, 255, 51) );
-      }
-      else
-      {
-        apple.render( color(255, 0, 0) );
-      }
-      */
       player.render();
+      player.checkDead();
       
       player.update();
+      /*
       if ( bodX.get(0) > (width-125)) //|| bodX.get(0) < 0 || bodY.get(0) >= gridH || bodY.get(0) < 0)
        {
          text("PLEASE WORK", 50, 50);
          level = 0;
-       }
+       }*/
        
      if (level == 0)
      {

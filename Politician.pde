@@ -69,6 +69,7 @@ class Politician extends GameObject
    
   void update()
   {  
+    
      if (keyPressed)
      {         
          if ( keyCode == UP )
@@ -94,18 +95,29 @@ class Politician extends GameObject
          }
        }//end key pressed if
        
-       if (bodX.get(0) > (width-150))
+    }//end update()
+    
+    void checkDead()
+    {
+       if (bodX.get(0) > (width-150) / sqSize || bodX.get(0) < 0 )
+       {
+         text("PLEASE WORK", 580, 580);
+         gameOver();
+       }
+       if (bodY.get(0) > (height-150) / sqSize || bodY.get(0) < 0 )
        {
          gameOver();
        }
        
-    }//end update()
+       
+    }
     
     void gameOver()
   {
     background(0);
     fill(green);
-    text("You Lost The Election!", width/3, height/2);
+    textAlign(CENTER);
+    text("You Lost The Election!", width/2, height/2);
   }
     
       
