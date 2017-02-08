@@ -6,6 +6,7 @@ class GameMode
   //int lev; //1-easy, 2-medium, 3-hard
   int foodCount = 0;
   
+  
     
   GameMode()
   {
@@ -19,6 +20,15 @@ class GameMode
     {
       drawGrid();
       player.render();
+      
+      if (foodCount % 5 == 0)
+      {
+        coin.render( color(255, 255, 51) );
+      }
+      else
+      {
+        apple.render( color(255, 0, 0) );
+      }
       
       
       player.update();
@@ -55,7 +65,7 @@ class GameMode
     }
     
     fill(green);
-    text("Score: /n %d", score, 200, 600);
+    text("Score:", score, 225, 650);
   }
   
    

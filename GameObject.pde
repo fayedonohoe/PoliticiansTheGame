@@ -14,7 +14,7 @@ class GameObject
     //this.goX = goX;
     //this.goY = goY;
     this.col = col;
-}
+  }
   
   void render(color col)
   {

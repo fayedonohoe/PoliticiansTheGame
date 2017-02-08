@@ -82,6 +82,8 @@ void setup()
   bodY.add(9);
   bodY.add(8);
  
+  coin = new Food();
+  apple = new Food();
 }
 
   //declaring
@@ -96,6 +98,9 @@ void setup()
   GameMode game;
   
   Politician player;
+  
+  Food coin;
+  Food apple;
   
   
 void draw()
