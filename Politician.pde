@@ -5,6 +5,7 @@ class Politician extends GameObject
 {
   int dir = 1;
   int changeDir ;
+  int eating = 0;
   
   // UP DOWN RIGHT LEFT
   int[] x = {0, 0, 1, -1};
@@ -33,9 +34,28 @@ class Politician extends GameObject
       //constrain(bodY.get(0), 0, height-125);
       bodX.add(0, bodX.get(0) + x[dir] );
       bodY.add(0, bodY.get(0) + y[dir] );
-      bodX.remove( bodX.size() -1 );
-      bodY.remove( bodY.size() -1 );
-    }  
+      
+      if (foodCount % 5 == 0 && foodCount != 0)
+      {
+        coin.render( color(255, 255, 51) );
+        eating = coin.eat();
+      }
+      else
+      {
+        apple.render( color(255, 0, 0) );
+        eating = apple.eat();
+      }
+      
+      if (eating == 1)
+      {
+        foodCount++;
+      }
+      else
+      {
+        bodX.remove( bodX.size() -1 );
+        bodY.remove( bodY.size() -1 );
+      } 
+  }  
   }//end render() 
   
    

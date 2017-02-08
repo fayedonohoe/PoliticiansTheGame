@@ -4,10 +4,7 @@ int gridH = (height-125);
 class GameMode
 {
   //int lev; //1-easy, 2-medium, 3-hard
-  int foodCount = 0;
-  
-  
-    
+     
   GameMode()
   {
     
@@ -19,8 +16,7 @@ class GameMode
     if (level == 1)
     {
       drawGrid();
-      player.render();
-      
+      /*
       if (foodCount % 5 == 0 && foodCount != 0)
       {
         coin.render( color(255, 255, 51) );
@@ -29,7 +25,8 @@ class GameMode
       {
         apple.render( color(255, 0, 0) );
       }
-      
+      */
+      player.render();
       
       player.update();
       if ( bodX.get(0) > (width-125)) //|| bodX.get(0) < 0 || bodY.get(0) >= gridH || bodY.get(0) < 0)
@@ -65,7 +62,7 @@ class GameMode
     }
     
     fill(green);
-    text("Score:", score, 225, 650);
+    text("Score:", score, width-100, height);
   }
   
    
