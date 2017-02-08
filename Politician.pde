@@ -122,6 +122,15 @@ class Politician extends GameObject
     text("Press M To Return To Menu", (width/2), (height/2)+50 );
     if (keyPressed && key == 'm')
     {
+        bodX.clear();
+        bodY.clear();
+        bodX.add(10);
+        bodX.add(10);
+        bodX.add(10);
+        bodY.add(10);
+        bodY.add(9);
+        bodY.add(8);
+        
         screen = 1;
     }
   }
