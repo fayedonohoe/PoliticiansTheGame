@@ -136,12 +136,14 @@ void draw()
       }
       else if (aboutButton.inside && mousePressed)
       {
-        screen = 3; //change to about screen
+        comingSoon();
+        //screen = 3; //change to about screen
       }
       
       else if (scoreButton.inside && mousePressed)
       {
-        screen = 4; //change to score screen
+        comingSoon();
+        //screen = 4; //change to score screen
       }
       break;
       
@@ -183,11 +185,13 @@ void draw()
       break;
     
       case 22:
-      game.play(2);
+      comingSoon();
+      //game.play(2);
       break;
     
       case 23:
-      game.play(3);
+      comingSoon();
+      //game.play(3);
       break;
  
     }// end switch
