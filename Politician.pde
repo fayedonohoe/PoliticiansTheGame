@@ -117,9 +117,12 @@ class Politician extends GameObject
     background(0);
     fill(green);
     textAlign(CENTER);
-    text("You Lost The Election!", width/2, height/2);
+    text("You Lost The Election!", width/2, (height/2)-50);
+    textSize(35);
+    text("You Scored:", width/2, (height/2)+50);
+    text(score, (width/2) + 140, (height/2)+50);
     textSize(20);
-    text("Press M To Return To Menu", (width/2), (height/2)+50 );
+    text("Press M To Return To Menu", (width/2), (height/2)+100 );
     if (keyPressed && key == 'm')
     {
         bodX.clear();
