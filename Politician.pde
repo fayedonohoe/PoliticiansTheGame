@@ -118,6 +118,12 @@ class Politician extends GameObject
     fill(green);
     textAlign(CENTER);
     text("You Lost The Election!", width/2, height/2);
+    textSize(20);
+    text("Press M To Return To Menu", (width/2), (height/2)+50 );
+    if (keyPressed && key == 'm')
+    {
+        screen = 1;
+    }
   }
     
       

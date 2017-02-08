@@ -19,21 +19,7 @@ class GameMode
       player.render();
       player.checkDead();
       
-      player.update();
-      /*
-      if ( bodX.get(0) > (width-125)) //|| bodX.get(0) < 0 || bodY.get(0) >= gridH || bodY.get(0) < 0)
-       {
-         text("PLEASE WORK", 50, 50);
-         level = 0;
-       }*/
-       
-     if (level == 0)
-     {
-       background(0);
-       fill(green);
-       text("You Lost The Election!", width/3, height/2);
-     }
-     
+      player.update();        
       //player.wrap();
     }
   }
